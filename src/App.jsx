@@ -1,9 +1,9 @@
 import "./App.css";
+import GoogleDrive from "./pages/google-drive/GoogleDriveGetText";
 function App() {
-  
   return (
     <div className="App">
-      <input type="text"/>
+      <GoogleDrive />
     </div>
   );
 }
