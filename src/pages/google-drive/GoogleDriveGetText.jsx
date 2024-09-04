@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { transferDriveUrlToText } from "../../utils/getText";
+import { transferDriveUrlToText, transferListDriveUrlToText } from "../../utils/getText";
 
 const Index = () => {
   const [text, setText] = useState("");
@@ -9,12 +9,9 @@ const Index = () => {
     alert(audioText);
   };
   const handleSubmitListUrl = async () => {
-    alert(typeof arrayText);
-    alert(Array.isArray(arrayText));
     const parsedArray = JSON.parse(arrayText);
-    alert(parsedArray);
-    alert(Array.isArray(parsedArray));
-    // const audioText = await transferDriveUrlToText(text);
+    const audioText = await transferListDriveUrlToText(parsedArray);
+    alert(audioText);
   };
   return (
     <div>
