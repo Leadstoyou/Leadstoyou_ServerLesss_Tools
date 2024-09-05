@@ -38,6 +38,7 @@ export const transferListDriveUrlToText = async (arr) => {
         auto_highlights: true,
       });
       result.push(audio.text)
+      console.log("🚀 ~ transferListDriveUrlToText ~ audio.text:", audio.text)
     } catch (error) {
       console.error(`Error processing ${e}:`, error);
     }
